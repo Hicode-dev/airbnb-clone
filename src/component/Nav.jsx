@@ -47,58 +47,64 @@ const Nav = () => {
   return (
     <div className='bg-slate-50 shadow-lg'>
       <div className='  flex px-9 items-center justify-between border-2  
-    '> 
+    '>
 
 
 
 
-      <div className='hidden md:block'>
-        <img src={image1} className="w-44" />
-      </div>
-      <div>
-        <div className="search bg-slate-200 px-5 flex items-center gap-4 rounded-full ">
-          <input type="text"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)} className='bg-slate-200 border-none outline-none py-3 rounded-full w-[220px]' />
-          <FaSearch />
+        <div className='hidden md:block'>
+          <img src={image1} className="w-44" />
+        </div>
+        <div>
+          <div className="search bg-slate-200 px-5 flex items-center gap-4 rounded-full ">
+            <input type="text"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)} className='bg-slate-200 border-none outline-none py-3 rounded-full w-[220px]' />
+            <FaSearch />
+          </div>
+
+
         </div>
 
-      
-      </div>
-   
-      <div className="switch-to-hosting flex gap-3 items-center">
-        <h3>Switch to hosting</h3>
-        <TbWorld size={25} />
-        <div className='flex p-2 items-center rounded-full gap-2 bg-slate-200'>
-          <FiMenu size={25} />
-          <FaUserCircle size={25} />
+        <div className="switch-to-hosting flex gap-3 items-center">
+          <h3>Switch to hosting</h3>
+          <TbWorld size={25} />
+          <div className='flex p-2 items-center rounded-full gap-2 bg-slate-200'>
+            <FiMenu size={25} />
+            <FaUserCircle size={25} />
+          </div>
         </div>
+
+
+
+
+
       </div>
 
+      {
+        search && <div className='py-4 bg-slate-200  shadow-lg'>
+           <DateRangePicker className='flex justify-center items-center'
+          onChange={item => setState({ ...state, ...item })}
+          showSelectionPreview={true}
+          moveRangeOnFirstSelection={false}
+          rangeColors={'#fd5B61'}
+          ranges={[state.selection1]}
+          direction="horizontal"
+          dayContentRenderer={customDayContent}
+          ariaLabels={{
+            dateInput: {
+              selection1: { startDate: "start date input of selction 1", endDate: "end date input of selction 1" },
 
+            },
+            monthPicker: "month picker",
+            yearPicker: "year picker",
+            prevButton: "previous month button",
+            nextButton: "next month button",
+          }}
+        />
+        </div>
+      }
 
-
-
-    </div>
-    <DateRangePicker className='flex justify-center items-center'
-        onChange={item => setState({ ...state, ...item })}
-        showSelectionPreview={true}
-        moveRangeOnFirstSelection={false}
-    
-        ranges={[state.selection1]}
-        direction="horizontal"
-        dayContentRenderer={customDayContent}
-        ariaLabels={{
-          dateInput: {
-            selection1: { startDate: "start date input of selction 1", endDate: "end date input of selction 1" },
-           
-          },
-          monthPicker: "month picker",
-          yearPicker: "year picker",
-          prevButton: "previous month button",
-          nextButton: "next month button",
-        }}
-      />;
     </div>
   )
 }
