@@ -1,9 +1,6 @@
 import React from 'react'
-<<<<<<< HEAD
 import {FaSearch}  from 'react-icons/fa'
-=======
 
->>>>>>> e9ec9f5e52c1762c6a68dce018dae795d2410d82
 const CarouselPage = () => {
   return (
     <div>
@@ -13,11 +10,7 @@ const CarouselPage = () => {
       <nav> 
       
   
-<<<<<<< HEAD
-            <form class="search shadow-lg "> 
-=======
-            <form class="search shadow-lg"> 
->>>>>>> e9ec9f5e52c1762c6a68dce018dae795d2410d82
+            <form class="search shadow-lg px-3"> 
               <div class="search-inputs">
                 <label for="location"> 
                   <div class="label">Location</div>
@@ -43,12 +36,8 @@ const CarouselPage = () => {
                   <input name="guests" id="guests" placeholder="Add dates"/>
                 </label>
               </div>
-              <div class="search-button">
-<<<<<<< HEAD
-                <button onclick="preventDefault()"><FaSearch /></button>
-=======
-                <button onclick="preventDefault()"><i class="fas fa-search fa-xs"></i></button>
->>>>>>> e9ec9f5e52c1762c6a68dce018dae795d2410d82
+              <div class="search-button flex justify-center items-center ">
+                <button onclick="preventDefault()" className='p-3 rounded-full'><FaSearch /></button>
               </div>
             </form>
         </nav> 

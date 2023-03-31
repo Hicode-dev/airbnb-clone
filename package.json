@@ -9,9 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@mui/lab": "^5.0.0-alpha.124",
-=======
+
+
+"@mui/lab": "^5.0.0-alpha.124",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.11",
@@ -19,7 +19,7 @@
     "antd": "^5.3.2",
     "date-fns": "^2.29.3",
     "flowbite": "^1.6.4",
->>>>>>> e9ec9f5e52c1762c6a68dce018dae795d2410d82
+
     "react": "^18.2.0",
     "react-date-range": "^1.4.0",
     "react-dom": "^18.2.0",

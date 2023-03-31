@@ -19,11 +19,11 @@ const Nav = () => {
       </div>
       <div>
         <div onClick={HandleSubmit}>
-          <div className="mysearch border-2 rounded-full flex items-center py-3 px-4 shadow-lg">
+          <div className="mysearch border-2  justify-between rounded-full flex items-center py-3 px-4 shadow-lg">
             <button className="anywhere">Anywhere</button>
             <button className="anyweek">Any week</button>
             <button className="addguest">Add guests</button>
-            <div className="search-case bg-red-500 rounded-full p-3">
+            <div className="search-case bg-red-500 rounded-full flex items-center justify-center  p-3">
               < FaSearch className='bg-red-500  text-white rounded-full ' />
             </div>
           </div>
@@ -41,7 +41,7 @@ const Nav = () => {
       </div>
       
     </div>
-    <div className='flex justify-center'>
+    <div className='flex justify-center mt-3'>
                 <CarouselPage />
 
     </div>
